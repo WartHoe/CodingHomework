@@ -1,0 +1,22 @@
+decodeMorse = function(morseCode){
+  morseCode = morseCode.replaceAll('   ', '*')
+  const a = morseCode.split('*')
+  console.log(a)
+  for (let i = 0; i<a.length; i++){
+    if (a[i] === ''){
+      a.splice(i,1)
+    }
+  }
+  let stra = ''
+  for (let i = 0; i<a.length; i++){
+    let asplit = a[i].split(' ')
+    console.log(asplit)
+    for (let j = 0; j<asplit.length; j++){
+      if (asplit[j] !== ''){
+      stra = stra+MORSE_CODE[asplit[j]]
+      }
+    }
+    if (i !== a.length-1){stra = stra + ' '}
+  }
+  return stra
+}
