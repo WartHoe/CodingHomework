@@ -1,0 +1,13 @@
+function findOdd(A) {
+  setA = [...new Set(A)];
+  let ans
+  
+  for (let i = 0; i<setA.length; i++){
+    sch = 0
+    for (let j = 0; j<A.length; j++){
+      if (setA[i] === A[j]){sch += 1}
+    }
+    if (sch % 2 === 1){ans = setA[i]}
+  }
+  return ans
+}
