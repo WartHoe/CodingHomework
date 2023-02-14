@@ -1,0 +1,13 @@
+function digitalRoot(n) {
+  let na = n.toString().split('')
+  s = 0
+  for (let i = 0; i<na.length; i++){
+    num = Number(na[i])
+    s = s + num
+  }
+  console.log(s)
+  
+  if (s.toString().split('').length > 1){
+    return(digitalRoot(s))
+  }else{return s}
+}
