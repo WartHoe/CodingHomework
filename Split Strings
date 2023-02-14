@@ -1,0 +1,11 @@
+function solution(str){
+  a = str.split('')
+  b = []
+  if (a.length % 2 !== 0){
+    a.push('_')
+  }
+  for (let i = 0; i<a.length; i+=2){
+    b.push(a[i]+a[i+1])
+  }
+  return(b)
+}
