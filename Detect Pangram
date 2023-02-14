@@ -1,0 +1,10 @@
+function isPangram(string){
+  string = string.toLowerCase()
+  alf = 'abcdefghijklmnopqrstuvwxyz'
+  alfa = alf.split('')
+  flag = true
+  for (let i = 0; i<alfa.length; i++){
+    if (string.indexOf(alfa[i]) <= -1){flag = false}
+  }
+  return flag
+}
